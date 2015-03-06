@@ -1,0 +1,19 @@
+h3 Search Results
+if data.count>0
+	p= 'Your search returned '+data.count+' results'
+	each item in data.results
+		h5
+			a(href=item.url)= item.roll_id
+		p= 'Question: '+item.question
+		p= 'Chamber: '+item.chamber
+		p= 'Result: '+item.result
+		p= 'Time: '+item.voted_at.slice(0,10)+' '+ item.voted_at.slice(11,19)
+else
+	p There's no match for your request
+
+//- h3 Results
+//- each item in data.results
+//- 	pre= JSON.stringify(item)
+
+h3 Raw data
+pre= JSON.stringify(data, null, ' ')

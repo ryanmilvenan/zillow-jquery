@@ -1,0 +1,27 @@
+h2 Bills
+each item in data.results
+    if item.short_title    
+        div.row
+            h3= item.short_title
+        div.row
+            div.col-md-6
+                b= "Sponsor: "
+                = item.sponsor.title + ". " + item.sponsor.first_name + " " + item.sponsor.last_name
+            div.col-md-6
+                - var introducedDate = new Date(item.introduced_on)
+                - introducedDate = introducedDate.toLocaleDateString()
+                b= "Introduced: "
+                = introducedDate
+        div.row
+            div.col-md-6
+                b= "Congress: "
+                = item.congress
+            div.col-md-6
+                - var lastVersion = new Date(item.last_version_on)
+                - lastVersion = lastVersion.toLocaleDateString()
+                b= "Last Version: "
+                = lastVersion
+        div.row
+            div.col-md-12
+                b= "Description: "
+                = item.official_title

@@ -1,0 +1,31 @@
+h5 Search
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Committee ID          
+            input#committeeName.form-control(type='text', required='')                
+    .col-md-4                         
+        button.btn.btn-primary(onClick='committees.searchByCommitteeName($("#committeeName").val())') Search
+
+
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Member ID           
+            input#nameID.form-control(type='text', required='')                
+    .col-md-4                         
+        button.btn.btn-primary(onClick='committees.searchByMemberID($("#nameID").val())') Search
+
+h5 Example Committees
+ul
+    li
+        a(href="#" onClick='committees.searchByCommitteeName("HSWM")') House Ways and Means Committee
+    li
+        a(href="#" onClick='committees.searchByCommitteeName("HSHM")') House Committee on Homeland Security
+
+h5 Boulder Members
+ul
+    li
+        a(href="#" onClick='committees.searchByMemberID("P000598")') Jared Polis
+    li
+        a(href="#" onClick='committees.searchByMemberID("G000562")') Cory Gardener

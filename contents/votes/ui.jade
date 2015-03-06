@@ -1,0 +1,32 @@
+h5 Search
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Question            
+            input#question.form-control(type='text', required='')                
+    .col-md-4                         
+        button.btn.btn-primary(onClick='votes.searchByQuestion($("#question").val())') Search
+
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Chamber            
+            input#chamber.form-control(type='text', required='')                
+    .col-md-4                         
+        button.btn.btn-primary(onClick='votes.searchByChamber($("#chamber").val())') Search
+
+h5 Questions
+ul
+    li
+        a(href="#" onClick='votes.searchByQuestion("bill")') Bill
+    li
+        a(href="#" onClick='votes.searchByQuestion("nomination")') Nomination
+    li
+        a(href="#" onClick='votes.searchByQuestion("motion")') Motion
+
+h5 Chambers
+ul
+    li
+        a(href="#" onClick='votes.searchByChamber("senate")') Senate
+    li
+        a(href="#" onClick='votes.searchByChamber("house")') House
