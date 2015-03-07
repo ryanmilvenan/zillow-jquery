@@ -1,7 +1,7 @@
 doctype html
 html(lang='en')
   head        
-    base(href='/sunlight/')
+    base(href='/zillow/')
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
     meta(name='viewport', content='width=device-width')     
@@ -12,7 +12,7 @@ html(lang='en')
   body
 
     div.container-fluid
-        h1 US Congress
+        h1 Zillow Property Search
         include navbar
 
         div#content
@@ -27,11 +27,8 @@ html(lang='en')
     script(src="js/apikey.js")
 
     // our app
-    script(src="legislators/index.js")
-    script(src="districts/index.js")
-    script(src="committees/index.js")           
-    script(src="votes/index.js")        
-    script(src="bills/index.js")
+    script(src="properties/index.js")
+    script(src="neighborhood/index.js")
     
     // main app
     script(src="js/app.js")

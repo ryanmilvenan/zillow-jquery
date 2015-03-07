@@ -1,18 +1,7 @@
-$( "#legislators" ).on( "click", function( event ) {
-    legislators.load()
+$( "#properties" ).on( "click", function( event ) {
+    properties.load()
 })
 
-$( "#districts" ).on( "click", function( event ) {
-    districts.load()
-})
-
-$( "#committees" ).on( "click", function( event ) {
-    committees.load()
-})
-$( "#votes" ).on( "click", function( event ) {
-    votes.load()
-})
-
-$( "#bills" ).on( "click", function( event ) {
-    bills.load()
+$( "#neighborhood" ).on( "click", function( event ) {
+    neighborhood.load()
 })
