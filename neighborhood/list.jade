@@ -1,0 +1,11 @@
+- var city = data.region.children[2].textContent
+- var state = data.region.children[1].textContent
+- var zip = data.region.children[3].textContent
+- var region = city + ", " + state + "\n" + zip
+- var detail = 'neighborhood.displayDetailView()'
+h3 Region
+    .indented
+        .row
+            .col-md-3
+                h5.subtitle= region
+                a(onCLick=detail, href="#") Demographics
