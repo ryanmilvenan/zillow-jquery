@@ -21,7 +21,7 @@ var properties = {
                     idx++;
                 });
                 properties.rslt = results
-                $.get("/properties/list.jade", function(template) {
+                $.get("/zillow-jquery/properties/list.jade", function(template) {
                     var html = jade.render(template, {
                         data: results
                     })
@@ -39,7 +39,7 @@ var properties = {
     
         var detailView = $(properties.rslt[property])
         detailView = detailView[0].children
-        $.get("/properties/detail.jade", function(template) {
+        $.get("/zillow-jquery/properties/detail.jade", function(template) {
             var html = jade.render(template, {
                 data: detailView
             })
@@ -50,7 +50,7 @@ var properties = {
 
     load: function() {
 
-        $.get("/properties/ui.jade", function(template) {
+        $.get("/zillow-jquery/properties/ui.jade", function(template) {
             var html = jade.render(template)
             $("#ui").html(html)
         })
