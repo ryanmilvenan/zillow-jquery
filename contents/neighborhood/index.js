@@ -16,7 +16,7 @@ var neighborhood = {
                 results.market = $(data).find("market")[0]
                 results.pages = $(data).find("pages")[0]
                 neighborhood.rslt = results
-                $.get("/zillow/neighborhood/list.jade", function(template) {
+                $.get("/neighborhood/list.jade", function(template) {
                     var html = jade.render(template, {
                         data: results
                     })
@@ -30,7 +30,7 @@ var neighborhood = {
     displayDetailView: function() {
     
         var detailView = $(neighborhood.rslt)
-        $.get("/zillow/neighborhood/detail.jade", function(template) {
+        $.get("/neighborhood/detail.jade", function(template) {
             var html = jade.render(template, {
                 data: detailView
             })
@@ -41,7 +41,7 @@ var neighborhood = {
     },
     load: function() {
 
-        $.get("/zillow/neighborhood/ui.jade", function(template) {
+        $.get("/neighborhood/ui.jade", function(template) {
             var html = jade.render(template)
             $("#ui").html(html)
         })
